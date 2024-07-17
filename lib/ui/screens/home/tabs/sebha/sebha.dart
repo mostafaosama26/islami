@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
-class Home extends StatelessWidget {
-  static const String routeName = 'home';
-  const Home({super.key});
+class Sebha extends StatelessWidget {
+  const Sebha({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-
+      backgroundColor: Colors.blue,
     );
   }
 }
