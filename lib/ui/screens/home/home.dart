@@ -18,10 +18,10 @@ class Home extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: AppColors.transparent,
           elevation: 0,
-          title: Center(child: Text('islami',style: AppStyle.appBarStyle,)),
+          title: Center(child: const Text('islami',style: AppStyle.appBarStyle,)),
         ),
         bottomNavigationBar: BottomNavigationBar(
-          items: [
+          items: const [
             BottomNavigationBarItem(icon: ImageIcon(AssetImage(AppAssets.icQuran)),label: 'Quran'),
             BottomNavigationBarItem(icon: ImageIcon(AssetImage(AppAssets.icSebha)),label: 'Sebha'),
             BottomNavigationBarItem(icon: ImageIcon(AssetImage(AppAssets.icRadio)),label: 'Radio'),
