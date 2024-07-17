@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami/ui/screens/home/home.dart';
 import 'package:islami/ui/screens/splash.dart';
+import 'package:islami/ui/utils/app_colors.dart';
 
 void main() {
   runApp(const Islami());
