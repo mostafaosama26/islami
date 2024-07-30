@@ -19,3 +19,16 @@ abstract class VersesNumber{
     44,28,28,20,56,40,31,50,40,46,42,29,19,36,25,22,17,19,26,30,20,15,21,11,8,5,19,5,8,8,11,11,8,3,9,5,4,6,3,6,3,5,4,5,6
   ];
 }
+
+class SuraDetailsArgs{
+  String suraName;
+  String fileName;
+
+  SuraDetailsArgs(this.suraName,this.fileName);
+}
+
+class Hadeth{
+  String title;
+  String content;
+  Hadeth(this.content,this.title);
+}

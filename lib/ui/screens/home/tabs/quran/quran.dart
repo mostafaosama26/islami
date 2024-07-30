@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:islami/ui/screens/sura_details/sura_details.dart';
 import 'package:islami/ui/utils/app_assets.dart';
 import 'package:islami/ui/utils/app_classes.dart';
 import 'package:islami/ui/utils/app_colors.dart';
@@ -45,11 +46,18 @@ class Quran extends StatelessWidget {
       flex: 70,
       child: ListView.builder(
         itemCount: SuraNames.suraNames.length,
-        itemBuilder: (context, index) => Row(
-          children: [
-            Expanded(child: Text(SuraNames.suraNames[index],textAlign: TextAlign.center,style: AppStyle.titlesTextStyle,)),
-            Expanded(child: Text((VersesNumber.versesNumber[index]).toString(),textAlign: TextAlign.center,style: AppStyle.titlesTextStyle,)),
-          ],
+        itemBuilder: (context, index) => GestureDetector(
+          onTap: (){
+            Navigator.pushNamed(
+                context, SuraDetails.routeName,
+                arguments: SuraDetailsArgs(SuraNames.suraNames[index], '${index + 1}.txt'));
+          },
+          child: Row(
+            children: [
+              Expanded(child: Text(SuraNames.suraNames[index],textAlign: TextAlign.center,style: AppStyle.titlesTextStyle,)),
+              Expanded(child: Text((VersesNumber.versesNumber[index]).toString(),textAlign: TextAlign.center,style: AppStyle.titlesTextStyle,)),
+            ],
+          ),
         ),
       ),
   );
